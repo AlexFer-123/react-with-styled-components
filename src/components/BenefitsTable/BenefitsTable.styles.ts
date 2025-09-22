@@ -14,17 +14,17 @@ export const BenefitsTableContainer = styled.div`
 `;
 
 export const TableContent = styled.div`
-  min-width: 700px;
+  min-width: 800px;
   position: relative;
   
   @media (max-width: 768px) {
-    min-width: 700px;
+    min-width: 750px;
   }
 `;
 
 export const TableHeader = styled.div`
   display: grid;
-  grid-template-columns: 1fr 0px 180px;
+  grid-template-columns: 1fr 0px 220px;
   align-items: center;
   font-family: 'Inter', sans-serif;
   font-size: 22px;
@@ -34,6 +34,10 @@ export const TableHeader = styled.div`
   background-color: transparent;
   border-bottom: 1px solid #2BBE41;
   position: relative;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 2fr 0px 200px;
+  }
 `;
 
 export const HeaderTitle = styled.h3`
@@ -75,8 +79,13 @@ export const HeaderColumn = styled.div`
   &:nth-child(2) {
     width: 120px;
     position: absolute;
-    right: 274px;
+    right: 294px;
     z-index: 1;
+    
+    @media (max-width: 768px) {
+      right: 230px;
+      width: 120px;
+    }
   }
   
   &:last-child {
@@ -88,18 +97,23 @@ export const HeaderColumn = styled.div`
 
 export const MiddleColumnBackground = styled.div`
   position: absolute;
-  right: 230px;
+  right: 250px;
   top: 0;
   width: 208px;
   height: 100%;
   background-color: #F5F5F5;
   border-radius: 12px;
   z-index: 0;
+  
+  @media (max-width: 768px) {
+    right: 220px;
+    width: 140px;
+  }
 `;
 
 export const TableRow = styled.div`
   display: grid;
-  grid-template-columns: 1fr 0px 180px;
+  grid-template-columns: 1fr 0px 220px;
   align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid #E0E1E2;
@@ -107,6 +121,10 @@ export const TableRow = styled.div`
   
   &:last-child {
     border-bottom: none;
+  }
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 2fr 0px 200px;
   }
 `;
 
@@ -120,6 +138,10 @@ export const BenefitName = styled.div`
   max-width: 500px;
   text-align: left;
   z-index: 1;
+
+  @media (max-width: 768px) {
+      max-width: 400px;
+  }
 `;
 
 export const IncludedBadge = styled.div`
@@ -132,8 +154,13 @@ export const IncludedBadge = styled.div`
   position: absolute;
   z-index: 1;
   width: 120px;
-  right: 274px;
+  right: 294px;
   left: auto;
+  
+  @media (max-width: 768px) {
+    right: 230px;
+    width: 120px;
+  }
 `;
 
 export const MarketPrice = styled.div`

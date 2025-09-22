@@ -3,8 +3,10 @@ import { AppContainer, Row, Section, SectionTitle, SectionTitlePrimary, Link, Ec
 import { PricingTable, BenefitsTable } from './components';
 import { dollarIcon as DollarIcon, arrowRightIcon as ArrowRightIcon } from './components/Icons';
 import { Button } from './components/Button';
+import { useBreakpoint } from './hooks/useBreakpoint';
 
 const App: React.FC = () => {
+  const { isMobile } = useBreakpoint();
   
   const benefitsData = [
     { name: "Certificado Digital", marketPrice: "R$ 200/ano" },
@@ -59,7 +61,12 @@ const App: React.FC = () => {
         <SectionTitle $fontSize='md' $maxWidth='440px'>Escolha o <SectionTitlePrimary>plano contábil</SectionTitlePrimary> ideal para sua empresa</SectionTitle>
         <img style={{marginBottom: '60px'}} src="./svg/UnderstandingPlans.png" alt="BackgroundPricing" />
 
-        <Row $flexDirection='row' $align='stretch' $justify='start' $gap='60px'>
+        <Row 
+          $flexDirection={isMobile ? 'column' : 'row'} 
+          $align={isMobile ? 'center' : 'stretch'} 
+          $justify='center' 
+          $gap={isMobile ? '32px' : '60px'}
+        >
           <PricingTable 
             title="Plano PJ"
             description="Faturamento Mensal: Ideal até 50 mil*   Notas fiscais: até 10 notas/mês"

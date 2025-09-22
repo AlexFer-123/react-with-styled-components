@@ -43,6 +43,10 @@ export const AppContainer = styled.div`
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
   min-height: 100vh;
+  
+  @media (max-width: 768px) {
+    padding: 20px 16px;
+  }
 `;
 
 export const Section = styled.section`
@@ -54,6 +58,12 @@ export const Section = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
+  @media (max-width: 768px) {
+    padding: 24px 16px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+  }
 `;
 
 export const Link = styled.a<LinkProps>`
@@ -75,6 +85,14 @@ export const SectionTitle = styled.h2<SectionTitleProps>`
   letter-spacing: -1%;
   font-weight: 500;
   max-width: ${({ $maxWidth }) => $maxWidth ? $maxWidth : '800px '};
+  
+  @media (max-width: 768px) {
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 24px;
+    max-width: 100%;
+    padding: 0 0;
+  }
 `;
 
 export const SectionTitlePrimary = styled.span`
@@ -88,6 +106,13 @@ export const EconomyText = styled.p`
   font-size: 30px;
   line-height: 40px;
   margin-left: 16px;
+  
+  @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: 32px;
+    margin-left: 12px;
+    text-align: center;
+  }
 `;
 
 export const EconomyTextStrong = styled.strong` 

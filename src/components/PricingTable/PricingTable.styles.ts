@@ -10,6 +10,11 @@ export const PricingTableWrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 400px;
+  }
 `;
 
 export const PopularBadge = styled.div`
@@ -43,6 +48,12 @@ export const PricingTableContainer = styled.div<PricingTableContainerProps>`
   height: 100%;
   z-index: 1;
   min-height: 535px;
+  
+  @media (max-width: 768px) {
+    max-width: 100%;
+    width: 100%;
+    min-height: auto;
+  }
 `;
 
 export const PricingTableHeader = styled.div`
