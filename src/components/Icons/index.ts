@@ -1,1 +1,1 @@
-export { checkIcon, plusIcon, dollarIcon } from './Icons';
+export { checkIcon, plusIcon, dollarIcon, arrowRightIcon } from './Icons';

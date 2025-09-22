@@ -24,12 +24,12 @@ const primaryVariant = css`
 
 const sizeStyles = {
   small: css`
-    padding: 8px 16px;
+    padding: 8px 34px;
     font-size: 14px;
     min-height: 32px;
   `,
   medium: css`
-    padding: 12px 24px;
+    padding: 12px 40px;
     font-size: 16px;
     min-height: 40px;
   `,
@@ -63,7 +63,7 @@ export const StyledButton = styled.button<ButtonProps>`
   transition: all 0.2s ease-in-out;
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: ${({ width }) => width === 'full' ? '100%' : 'auto'};
 
   
   /* Aplicar variante */

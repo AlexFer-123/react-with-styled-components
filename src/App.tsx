@@ -1,6 +1,8 @@
 import React from 'react';
-import { AppContainer, Row, Section, SectionTitle, SectionTitlePrimary } from './App.styles';
+import { AppContainer, Row, Section, SectionTitle, SectionTitlePrimary, Link, EconomyText, EconomyTextStrong } from './App.styles';
 import { PricingTable, BenefitsTable } from './components';
+import { dollarIcon as DollarIcon, arrowRightIcon as ArrowRightIcon } from './components/Icons';
+import { Button } from './components/Button';
 
 const App: React.FC = () => {
   
@@ -40,6 +42,14 @@ const App: React.FC = () => {
         <Row $flexDirection='column' $align='center' $justify='center'>
           <SectionTitle>Por que a <SectionTitlePrimary>Contabilidade.com</SectionTitlePrimary> é a melhor opção em São Paulo?</SectionTitle>
           <BenefitsTable benefits={benefitsData} />
+
+          <Row $margin='24px 0' $align='center' $justify='center'>
+            <DollarIcon /> <EconomyText>Uma economia média de <EconomyTextStrong>R$ 9.456/ano</EconomyTextStrong></EconomyText> 
+          </Row>
+
+          <Row $flexDirection='row' $align='center' $justify='center'>
+            <Button>Abrir empresa grátis</Button>
+          </Row>
         </Row>
       </Section>
 
@@ -72,6 +82,9 @@ const App: React.FC = () => {
             price="329"
             features={featuresPJVip || []}
           />
+        </Row>
+        <Row $flexDirection='row' $align='center' $justify='center'>
+           <Link $margin='lg'>COMPARE TODOS OS PLANOS <ArrowRightIcon /></Link>
         </Row>
       </Section>
     </AppContainer>

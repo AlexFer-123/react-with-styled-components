@@ -5,6 +5,12 @@ export interface SectionTitleProps {
   $fontSize?: 'lg' | 'md' | 'sm';
 }
 
+const spacing = {
+  'sm': '12px',
+  'md': '24px',
+  'lg': '32px'
+}
+
 const fontSizes = 
   {
     'lg': '48px', 
@@ -12,12 +18,16 @@ const fontSizes =
     'sm': '24px'
   }
 
+export interface LinkProps {
+  $margin?: 'sm' | 'md' | 'lg';
+  }
+
 export interface RowProps {
   $align?: 'start' | 'center' | 'end' | 'space-between' | 'stretch';
   $justify?: 'start' | 'center' | 'end' | 'space-between';
   $flexDirection?: 'row' | 'column';
   $gap?: string;
-  $marginBottom?: string;
+  $margin?: string;
   $height?: string;
 }
 
@@ -46,6 +56,16 @@ export const Section = styled.section`
   justify-content: center;
 `;
 
+export const Link = styled.a<LinkProps>`
+  color: #232425;
+  text-decoration: underline  ;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  line-height: 24px;
+  margin:  ${({ $margin }) => $margin ? `${spacing[$margin]} 8px` : '0'};
+`;
+
 export const SectionTitle = styled.h2<SectionTitleProps>`
   color: #232425;
   text-align: center;
@@ -61,13 +81,25 @@ export const SectionTitlePrimary = styled.span`
   color: #1FB841;
 `;
 
+export const EconomyText = styled.strong`
+  color: #2BBE41;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+`;
+
+export const EconomyTextStrong = styled.strong` 
+  font-weight: 600;
+`;
+
 export const Row = styled.div<RowProps>`
   display: flex;
   gap: ${({ $gap }) => $gap ? $gap : '0'};
   flex-direction: ${({ $flexDirection }) => $flexDirection ? $flexDirection : 'row'};
   align-items: ${({ $align }) => $align ? $align : 'start'};
   justify-content: ${({ $justify }) => $justify ? $justify : 'center'};
-  margin-bottom: ${({ $marginBottom }) => $marginBottom ? $marginBottom : '0px'};
+  margin: ${({ $margin }) => $margin ? $margin : '0px'};
   height: ${({ $height }) => $height ? $height : 'auto'};
   width: 100%;
 `;

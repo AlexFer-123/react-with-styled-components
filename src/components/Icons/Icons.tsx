@@ -31,9 +31,7 @@ const checkIcon = () => {
 
 const dollarIcon = () => {
     return (
-    <IconContainer $isCheck={false}>
         <img src="/svg/dollarIcon.svg" alt="DollarIcon" />
-    </IconContainer>
     )
 }
 
@@ -45,4 +43,10 @@ const plusIcon = () => {
     )
 }
 
-export { checkIcon, plusIcon, dollarIcon }; 
+const arrowRightIcon = () => {
+    return (
+        <img src="/svg/ArrowRight.svg" alt="ArrowRight" />
+    )
+}
+
+export { checkIcon, plusIcon, dollarIcon, arrowRightIcon }; 

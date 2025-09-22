@@ -8,6 +8,7 @@ export interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
   variant?: 'primary';
   size?: 'small' | 'medium' | 'large';
+  width?: 'full' | 'auto';
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -17,6 +18,7 @@ export const Button: React.FC<ButtonProps> = ({
   type = 'button',
   variant = 'primary',
   size = 'medium',
+  width = 'auto',
   ...props
 }) => {
   return (
@@ -26,6 +28,7 @@ export const Button: React.FC<ButtonProps> = ({
       type={type}
       variant={variant}
       size={size}
+      width={width}
       {...props}
     >
       {children}

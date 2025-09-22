@@ -25,7 +25,7 @@ export const PricingTable = ({ title, description, price, features, previousPric
             <Price price={price}></Price>
             <PricingTableDescription>{description}</PricingTableDescription>
             {features.map((feature, index) => (
-              <Row key={index} $flexDirection='row' $align='start' $justify='start' $marginBottom='12px'>
+              <Row key={index} $flexDirection='row' $align='start' $justify='start' $margin='0 0 12px 0'>
                   <PricingTableFeatureIcon>{feature.icon === 'check' ? 
                   <CheckIcon />
                   : <PlusIcon />
