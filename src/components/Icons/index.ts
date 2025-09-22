@@ -1,0 +1,1 @@
+export { checkIcon, plusIcon, dollarIcon } from './Icons';
