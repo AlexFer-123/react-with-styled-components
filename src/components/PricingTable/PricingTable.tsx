@@ -35,7 +35,7 @@ export const PricingTable = ({ title, description, price, features, previousPric
             ))}
           </PricingTableHeader>
           <Row $flexDirection='row' $justify='center' style={{ marginTop: 'auto' }}>
-              <Button>Comece grátis</Button>
+              <Button width='full'>Comece grátis</Button>
           </Row>
         </PricingTableContainer>
       </PricingTableWrapper>

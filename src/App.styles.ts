@@ -81,12 +81,13 @@ export const SectionTitlePrimary = styled.span`
   color: #1FB841;
 `;
 
-export const EconomyText = styled.strong`
+export const EconomyText = styled.p`
   color: #2BBE41;
   font-weight: 500;
   font-family: 'Inter', sans-serif;
   font-size: 30px;
   line-height: 40px;
+  margin-left: 16px;
 `;
 
 export const EconomyTextStrong = styled.strong` 
